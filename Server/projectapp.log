@@ -1,0 +1,28 @@
+[2017-Dec-01 08:43] 127.0.0.1 POST http /upload? 200 OK
+[2017-Dec-01 08:53] 127.0.0.1 POST http /upload? 200 OK
+[2017-Dec-01 08:56] 127.0.0.1 POST http /upload? 200 OK
+[2017-Dec-01 09:02] 127.0.0.1 POST http /upload? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+  File "Server code.py", line 29, in upload
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/utils.py", line 73, in __get__
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 520, in files
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 184, in _load_form_data
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 361, in _load_form_data
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 195, in parse
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 100, in wrapper
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 212, in _parse_multipart
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 523, in parse
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/datastructures.py", line 382, in __init__
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 521, in <genexpr>
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 486, in parse_parts
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 357, in start_file_streaming
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/wrappers.py", line 316, in _get_file_stream
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/formparser.py", line 42, in default_stream_factory
+  File "/usr/lib/python2.7/tempfile.py", line 511, in TemporaryFile
+  File "/usr/lib/python2.7/tempfile.py", line 244, in _mkstemp_inner
+OSError: [Errno 24] Too many open files: '/tmp/tmpZgUZdo'
+
+[2017-Dec-01 09:03] 127.0.0.1 POST http /upload? 200 OK
