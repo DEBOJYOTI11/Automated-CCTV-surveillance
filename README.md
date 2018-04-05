@@ -46,6 +46,8 @@ Both the model use a face dataset for experimentation. Please it here [Face94](h
 
 ### Running client side CCTV application 
 
+![alt text](https://raw.githubusercontent.com/DEBOJYOTI11/Automated-CCTV-surveillance/master/workflow%20diagram.PNG)
+
 Go to the ClientSideCCTV folder and Run 
 ``` 
 Python main.py
